@@ -1,7 +1,7 @@
 {
   "name": "dsh-cost-meter",
   "version": "0.6.6",
-  "description": "DSH Web GUI 底部状态栏显示 DeepSeek 会话费用估算与账户余额（余额经宿主路由查询官方 API，费用由会话 token 用量估算）。",
+  "description": "DSH Web GUI plugin: DeepSeek session cost estimate + account balance in the bottom status bar (live official pricing, per-session/per-model billing)",
   "type": "module",
   "main": "lib/index.js",
   "exports": {
