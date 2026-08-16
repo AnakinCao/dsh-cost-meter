@@ -1,0 +1,10 @@
+# dsh-cost-meter bundle patch
+#
+# 通过 `dsh plugin --profile web add <本仓库地址>` 安装后自动挂载。
+# 手动安装（免重启）：在 profile 的 cordis.patch.yml 追加
+#   - insert:
+#       - id: dsh-cost-meter
+#         name: 'dsh-cost-meter'
+- insert:
+    - id: dsh-cost-meter
+      name: 'dsh-cost-meter'
