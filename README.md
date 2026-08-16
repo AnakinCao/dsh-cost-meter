@@ -7,11 +7,12 @@ DSH Web GUI 底部状态栏显示 **DeepSeek 会话费用估算** 与 **账户�
 在输入框下方的底部状态栏（`conversation.composer.dock` 槽位，与 live-stats 统计行同一行）显示：
 
 ```
-费用 $0.1234 · 余额 ¥110.00
+今日 ¥0.52 · 会话 ¥0.08 · 余额 ¥365.54
 ```
 
-- **费用**：按当前会话 token 用量（`tokenUsage` 投影：输入/缓存命中输入/输出）乘以 DeepSeek 官方单价估算，USD 计价；
-- **余额**：宿主侧每 60 秒查询一次官方 `GET https://api.deepseek.com/user/balance`（带缓存），优先显示 CNY。
+- **今日/会话费用**：分别按"今日全部会话"与"当前会话"的 token 用量（输入/缓存命中输入/输出）乘以 DeepSeek 官方单价估算，按汇率换算为人民币（`CNY_PER_USD` 可调）；
+- **余额**：宿主侧每 60 秒查询一次官方 `GET https://api.deepseek.com/user/balance`（带缓存），优先显示 CNY；
+- **余额告警**：CNY 余额低于 `BALANCE_WARN_CNY`（默认 50）时整行变红提醒。
 
 ## 安装
 
