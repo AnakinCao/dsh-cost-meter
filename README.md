@@ -9,7 +9,7 @@ A DSH Web GUI plugin that shows **DeepSeek session cost estimates** and **accoun
 In the bottom status bar below the input box (the `conversation.composer.dock` slot, same row as the live-stats stats line; actual labels follow the UI locale):
 
 ```
-stats row · TPS | Flash off-peak 0.05/1.5/4.5 · Today ¥11.52 (5 sessions) · Session ¥0.08 · Balance ¥365.36
+stats row · TPS Flash off-peak 0.05/1.5/4.5 · Today ¥11.52 (5 sessions) · Session ¥0.08 · Balance ¥365.36
 ```
 
 - **Current model live price**: reads the current session's selected model via the `session.models` RPC and shows its live unit price (order: cache hit / cache miss / output, CNY per 1M tokens, model name bold); peak/off-peak pricing switches automatically; updates within ~2.5s after switching the model in the composer.
