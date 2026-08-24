@@ -20,6 +20,7 @@ stats row · TPS Flash off-peak 0.05/1.5/4.5 · Today ¥11.52 (5 sessions) · Se
 - **Cross-session dedup**: DSH subagent session files carry full copies of the parent session's events, so the host globally dedupes usage samples by (time, turn, step, counts) fingerprint — the same API requests are billed once even when they appear in several session files (previously this inflated today's cost ~5x; now it closely tracks the platform's deduction records).
 - **Balance**: queried every 60s from the official `GET https://api.deepseek.com/user/balance` (cached), CNY preferred.
 - **Balance warning**: turns the whole row red when the CNY balance drops below `BALANCE_WARN_CNY` (default 50).
+- **Token-type stats**: the tooltip shows an estimated breakdown of historical session token consumption by content type (command output / git output / code content / tool outputs / user / assistant / reasoning) plus a per-project distribution — data basis for token optimization (host `/api/token-types`, 10 min cache, full history scan).
 
 ## Install
 

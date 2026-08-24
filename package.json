@@ -1,6 +1,6 @@
 {
   "name": "dsh-cost-meter",
-  "version": "0.7.4",
+  "version": "0.8.0",
   "description": "DSH Web GUI plugin: DeepSeek session cost estimate + account balance in the bottom status bar (live official pricing, per-session/per-model billing)",
   "type": "module",
   "main": "lib/index.js",
