@@ -1,6 +1,6 @@
 {
   "name": "dsh-cost-meter",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "description": "DSH Web GUI plugin: DeepSeek session cost estimate + account balance in the bottom status bar (live official pricing, per-session/per-model billing)",
   "type": "module",
   "main": "lib/index.js",
@@ -23,10 +23,8 @@
     "client": {
       "platform": "web",
       "inject": [
-        "@deepseek-ai/dsh-client-runtime",
         "@deepseek-ai/dsh-client-connection",
-        "@deepseek-ai/dsh-client-ui-conversation",
-        "@deepseek-ai/dsh-client-ui-slots"
+        "@deepseek-ai/dsh-client-ui-conversation"
       ]
     }
   },
